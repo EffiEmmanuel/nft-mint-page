@@ -1,13 +1,126 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'MADE Outer Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: url('../public/images/hero-bg.png');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.navbar {
+  color: white;
+}
+
+#offcanvasNavbar {
+  flex-grow: 0;
+  width: 33.3%;
+}
+
+.logoContainer, .connectWalletContainer {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
+
+.connectWalletContainer {
+  justify-content: flex-end;
+}
+
+.connectWalletContainer button {
+  border: none;
+  background-color: white;
+  padding: 10px;
+  /* width: 0%; */
+}
+/* Mint Section */
+.mint-section {
+  margin-top: 150px;
+}
+
+.mint-form-container {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 30px 40px;
+}
+
+.mint-form-container h2 {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#mint-form p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 40px 0;
+  border-bottom: 2px solid white;
+}
+
+#mint-form p input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  width: 25px;
+  text-align: center;
+}
+
+#max-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+#mint-button {
+  border: none;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  /* margin: 0 40px; */
+}
+
+.control-buttons button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+@media (min-width:992px) {
+  .btn-close {
+    display: none;
+  }
+}
+
+@media (max-width:992px) {
+  .logoContainer {
+    justify-content: flex-start;
+  }
+
+  .mobileMenu {
+    background-color: #141414;
+  }
+}
+
+@media (max-width:768px) {
+  .connectWalletContainer {
+    width: 43.3%;
+  }
+  .connectWalletContainer button {
+    margin-left: 2px;
+  }
+
+  #offcanvasNavbar {
+    width: 100%;
+  }
+
 }
